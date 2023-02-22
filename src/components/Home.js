@@ -6,19 +6,41 @@ import EngineType from "./EngineType";
 import VehicleType from "./VehicleType";
 import "./module.css";
 import "./navbar.css";
+import axios from "axios";
 
-function clickMe() {
-  alert("You clicked me");
-}
 export default function Home() {
   //because extends the Component , if no, then render is not required.
   const [selected, setSelected] = useState("Choose one");
   const [selected1, setSelected2] = useState("Choose one");
   const [selected3, setSelected4] = useState("Choose one");
 
-  const handleClick = (e) => {
-    console.log("hello,ninjas", e);
+  const handleClick = () => {
+    const origin = document.getElementById("origin").value;
+    const mileage = document.getElementById("mileage").value;
+    const destination = document.getElementById("destination").value;
+    const fuelType = selected;
+    const vehicleType = selected1;
+    const engineType = selected3;
+
+    axios
+      .post("http://your-django-server-url.com/your-api-endpoint", {
+        origin: origin,
+        mileage: mileage,
+        destination: destination,
+        fuel_type: fuelType,
+        vehicle_type: vehicleType,
+        engine_type: engineType,
+      })
+      .then((response) => {
+        // Handle the response from the server
+        console.log(response);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.log(error);
+      });
   };
+
   return (
     <Fragment>
       <header className="header">
@@ -40,21 +62,21 @@ export default function Home() {
         <div className="originInput">
           <label className="inputTitle">From</label>
           <div className="inputflex">
-            <input type="text" placeholder="Enter your origin" />
+            <input type="text" placeholder="Enter your origin" id="origin" />
           </div>
         </div>
 
         <div className="mileageInput">
           <label className="inputTitle">Trip distance (in Km)</label>
           <div className="inputflex">
-            <input type="number" placeholder="Enter the total mileage" />
+            <input type="number" placeholder="Enter the total mileage" id="mileage" />
           </div>
         </div>
 
         <div className="destinationInput">
           <label className="inputTitle">To</label>
           <div className="inputflex">
-            <input type="text" placeholder="Enter your destination" />
+            <input type="text" placeholder="Enter your destination" id="destination" />
           </div>
         </div>
 
@@ -78,9 +100,8 @@ export default function Home() {
         </div>
 
         <div className="userInput">
-          <button onClick={clickMe}>Calculate my emissions</button>
+          <button onClick={handleClick}>Calculate my emissions</button>
         </div>
       </div>
-    </Fragment>
-  );
-}
+    </Fragment>)
+    };
