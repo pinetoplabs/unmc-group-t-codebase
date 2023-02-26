@@ -115,3 +115,16 @@ input {
   border: 0;
   outline: 0;
 }
+
+.row {
+  display: flex;
+  padding-left: 4%;
+}
+
+.mileageInput {
+  padding-left: 30%;
+}
+
+.destinationInput {
+  padding-top: 3%;
+}

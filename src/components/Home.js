@@ -38,17 +38,19 @@ export default function Home() {
           <h5>Trip details:</h5>
         </div>
 
-        <div className="originInput">
-          <label className="inputTitle">From</label>
-          <div className="inputflex">
-            <input type="text" placeholder="Enter your origin" />
+        <div className="row">
+          <div className="originInput">
+            <label className="inputTitle">From</label>
+            <div className="inputflex">
+              <input type="text" placeholder="Enter your origin" />
+            </div>
           </div>
-        </div>
 
-        <div className="mileageInput">
-          <label className="inputTitle">Trip distance (in Km)</label>
-          <div className="inputflex">
-            <input type="number" placeholder="Enter the total mileage" />
+          <div className="mileageInput">
+            <label className="inputTitle">Trip distance (in Km)</label>
+            <div className="inputflex">
+              <input type="number" placeholder="Enter the total mileage" />
+            </div>
           </div>
         </div>
 
