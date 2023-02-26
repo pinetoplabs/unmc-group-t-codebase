@@ -6,6 +6,7 @@ import EngineType from "./EngineType";
 import VehicleType from "./VehicleType";
 import "./module.css";
 import "./navbar.css";
+import "./result.css";
 
 function clickMe() {
   alert("You clicked me");
@@ -79,6 +80,28 @@ export default function Home() {
 
         <div className="userInput">
           <button onClick={clickMe}>Calculate my emissions</button>
+        </div>
+      </div>
+
+      <div className="title2">
+        <h1>Your Footprint</h1>
+      </div>
+
+      <div className="displayRow">
+        <div className="cardContainer1">
+          <div className="cardTitle">
+            Kilometers
+            <div className="cardBody">123</div>
+            <div className="cardDescription">Your travelled distance</div>
+          </div>
+        </div>
+
+        <div className="cardContainer2">
+          <div className="cardTitle">
+            CO2
+            <div className="cardBody">123</div>
+            <div className="cardDescription">Your carbon emissions</div>
+          </div>
         </div>
       </div>
     </Fragment>

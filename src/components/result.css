@@ -1,0 +1,41 @@
+.title2 {
+  text-align: center;
+  padding-top: 10%;
+  margin: auto;
+}
+
+.cardTitle {
+  text-align: center;
+  padding: 10%;
+  font-weight: 700 !important;
+}
+
+.cardContainer1 {
+  min-width: 20%;
+  max-height: fit-content;
+  box-shadow: 0px 0px 10px -5px;
+  border-radius: 0.75rem !important;
+  margin-top: 2rem !important;
+  background-color: white;
+  margin-left: 20%;
+}
+
+.cardContainer2 {
+  min-width: 20%;
+  min-height: 200px;
+  box-shadow: 0px 0px 10px -5px;
+  border-radius: 0.75rem !important;
+  margin-top: 2rem !important;
+  flex-direction: column;
+  background-color: white;
+  margin-left: 20%;
+}
+
+.displayRow {
+  display: flex;
+  max-width: 200%;
+}
+
+.cardBody {
+  margin-top: 20%;
+}
