@@ -128,3 +128,11 @@ input {
 .destinationInput {
   padding-top: 3%;
 }
+
+.line {
+  opacity: 1;
+  overflow: hidden;
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+}

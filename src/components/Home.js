@@ -61,6 +61,7 @@ export default function Home() {
           </div>
         </div>
 
+        <hr className="line"></hr>
         <div className="card-title">
           <h5>Vehicle details:</h5>
         </div>
