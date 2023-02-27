@@ -1,4 +1,4 @@
-import { Component, useState } from "react";
+import { Component, useRef, useState } from "react";
 import { Fragment } from "react";
 import transportImage from "../assets/Transport.jpg";
 import FuelType from "./FuelType";
@@ -7,18 +7,18 @@ import VehicleType from "./VehicleType";
 import "./module.css";
 import "./navbar.css";
 import "./result.css";
+import Headline from "./Headline.js";
 
-function clickMe() {
-  alert("You clicked me");
-}
 export default function Home() {
   //because extends the Component , if no, then render is not required.
   const [selected, setSelected] = useState("Choose one");
   const [selected1, setSelected2] = useState("Choose one");
   const [selected3, setSelected4] = useState("Choose one");
 
-  const handleClick = (e) => {
-    console.log("hello,ninjas", e);
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <Fragment>
@@ -82,12 +82,12 @@ export default function Home() {
         </div>
 
         <div className="userInput">
-          <button onClick={clickMe}>Calculate my emissions</button>
+          <button onClick={handleClick}>Calculate my emissions</button>
         </div>
       </div>
 
       <div className="title2">
-        <h1>Your Footprint</h1>
+        <Headline ref={ref} text="Your Footprint"></Headline>
       </div>
 
       <div className="displayRow">
