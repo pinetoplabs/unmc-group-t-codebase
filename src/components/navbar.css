@@ -135,8 +135,8 @@ input {
 }
 
 .userInput button {
-  margin-left: 80%;
-  font-size: 20px;
+  margin-left: 85%;
+  font-size: 13px;
   border-radius: 0.4rem !important;
   border-width: 0.25px;
   padding: 0.5% 1%;
