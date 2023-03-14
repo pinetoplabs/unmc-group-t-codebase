@@ -3,7 +3,12 @@ import "./F.css";
 
 function FuelType({ selected, setSelected }) {
   const [isActive, setIsActive] = useState(false);
-  const options = ["Petrol RON95", "Petrol RON97", "Diesel"];
+  const options = [
+    "Regular Gasoline",
+    "Premium Gasoline",
+    "Diesel",
+    "E85(ethanol)",
+  ];
   return (
     <div className="choicebox">
       <div className="choicebox-btn" onClick={(e) => setIsActive(!isActive)}>

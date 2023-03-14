@@ -4,6 +4,7 @@ import transportImage from "../assets/Transport.jpg";
 import FuelType from "./FuelType";
 import EngineType from "./EngineType";
 import VehicleType from "./VehicleType";
+import Description from "./Description";
 import "./module.css";
 import "./navbar.css";
 import "./result.css";
@@ -65,26 +66,27 @@ export default function Home() {
         <div className="card-title">
           <h5>Vehicle details:</h5>
         </div>
-
         <div className="subtitle">
           <div className="temp">
-            <h5>Fuel type:</h5>
+            <h5>Engine type:</h5>
           </div>
-          <FuelType selected={selected} setSelected={setSelected} />
+          <EngineType selected={selected3} setSelected={setSelected4} />
           <div className="temp">
             <h5>Vehicle type:</h5>
           </div>
           <VehicleType selected={selected1} setSelected={setSelected2} />
           <div className="temp">
-            <h5>Engine type:</h5>
+            <h5>Fuel type:</h5>
           </div>
-          <EngineType selected={selected3} setSelected={setSelected4} />
+          <FuelType selected={selected} setSelected={setSelected} />
         </div>
 
         <div className="userInput">
           <button onClick={handleClick}>Calculate my emissions</button>
         </div>
       </div>
+
+      <Description />
 
       <div className="title2">
         <Headline ref={ref} text="Your Footprint"></Headline>

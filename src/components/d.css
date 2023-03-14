@@ -1,0 +1,9 @@
+.title {
+  text-align: center;
+  padding-left: 25%;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 2%;
+  padding-top: 10%;
+}

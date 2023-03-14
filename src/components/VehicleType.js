@@ -4,11 +4,13 @@ import "./module.css";
 function VehicleType({ selected, setSelected }) {
   const [isActive, setIsActive] = useState(false);
   const options = [
-    "Small Car",
-    "Medium size  car",
-    "Large Car",
-    "SUV",
-    "Large Truck",
+    "Minicompact(car)",
+    "Subcompact(car)",
+    "Compact(car)",
+    "Mid-size(car)",
+    "Full-size(car)",
+    "Small(truck)",
+    "Standard(truck)",
   ];
   return (
     <div className="choicebox">

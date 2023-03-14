@@ -47,7 +47,7 @@
   margin-top: -1rem !important;
   position: relative;
   background-color: white;
-  padding-bottom: 50%;
+  padding-bottom: 60%;
 }
 
 .card-title {
@@ -135,9 +135,10 @@ input {
 }
 
 .userInput button {
-  margin-left: 85%;
-  font-size: 13px;
+  margin-left: 80%;
+  font-size: 20px;
   border-radius: 0.4rem !important;
   border-width: 0.25px;
   padding: 0.5% 1%;
+  margin-top: 10%;
 }

@@ -3,7 +3,7 @@ import "./E.css";
 
 function EngineType({ selected, setSelected }) {
   const [isActive, setIsActive] = useState(false);
-  const options = ["Combustion", "Electric", "Hybrid"];
+  const options = ["Combustion", "Hybrid"];
   return (
     <div className="choicebox">
       <div className="choicebox-btn" onClick={(e) => setIsActive(!isActive)}>
